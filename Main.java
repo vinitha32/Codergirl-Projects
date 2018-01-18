@@ -1,37 +1,24 @@
 package com.company;
+
 import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("Please list three items on your grocery shopping list.");
-        System.out.println("Item 1 ?"  );
-        Scanner scan = new Scanner(System.in);
-        String s= scan.nextLine() ;
-        System.out.println("Item 2 ?");
-        String g= scan.nextLine() ;
-        System.out.println("Item 3 ?");
-        String h = scan.nextLine();
-        System.out.println("Now, please enter the quantity of each item.");
-        System.out.println("How many " + s + " ? ");
-        int i = scan.nextInt();
-        System.out.println("How many " + g + " ? ");
-        int j = scan.nextInt();
-        System.out.println("How many " + h + " ? ");
-        int k =scan.nextInt();
-        System.out.println("Now, please enter the price of each item.");
-        System.out.println("How much does one " + s + " cost ?" );
-        Double p = scan.nextDouble();
-        System.out.println("How much does one " + g + " cost ?" );
-        Double q = scan.nextDouble();
-        System.out.println("How much does one " + h + " cost ?" );
-        Double r = scan.nextDouble();
-        System.out.println("Calculating your grocery bill.");
-        double z;
-        z = i*p + j*q + k*r;
-        System.out.println("Your total cost is " + z);
-
+        System.out.println("What is today's price for boards, in silver pieces? ");
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+     int j =9 * i;
+        System.out.println("The cost per chest is " + j +" silver pieces for boards");
+        System.out.println("What is today's price for locks, in silver pieces?");
+        int k = sc.nextInt();
+        System.out.println("How many silver pieces does Lady Ching wish to invest in building chests?");
+        int w =sc.nextInt();
+        int z =j+k;
+        int y= w/z;
+        System.out.println("That will pay for the creation of " + y +"chests.");
+        int r = w - z * y ;
+        System.out.println("Left over silver pieces: " + r);
     }
-
 }
