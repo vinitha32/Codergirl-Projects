@@ -17,6 +17,6 @@ public class arewethereyet
                 answer = false;
             } else if (!(s).equals("no")) {
                 System.out.println(" Huh? I didn't understand ");
-                answer=false;
+                answer=true;
             }
         }}}
