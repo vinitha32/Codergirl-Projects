@@ -33,10 +33,10 @@ while( success ==0)
            }
 
         }
-        else if (guess < computerValue){
+        else if (guess > computerValue){
             System.out.println("My number is Lower!");
         }
-        else if (guess > computerValue){
+        else if (guess < computerValue){
             System.out.println("My number is Higher!");
         }
     }}}}
