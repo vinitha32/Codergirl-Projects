@@ -4,16 +4,17 @@ public class multiplication {
     public static void main(String[] args) {
         System.out.println("Welcome to Multiplication Tables.\n");
         System.out.println("How large would you like to see them?");
-        Scanner sc=new Scanner(System.in);
-        int j=sc.nextInt();
-        int i,n,k;
-       for(i=0;i<=j;i++)
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+    if(size<=20)
+    {
+        int size1,size2,result;
+
+       for(size1=0;size1<=size;size1++)
        {
-         for(k=0;k<=j;k++)
+         for(size2=0;size2<=size;size2++)
          {
-         n=k*i;
-         System.out.println(i + "*" + k + "=" + n);
+         result=size1*size2;
+         System.out.println(size1 + "*" + size2 + "=" + result);
 
-       }}}}
-
-
+       }}}}}
