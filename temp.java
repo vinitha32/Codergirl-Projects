@@ -72,6 +72,7 @@ public class temp {
 
         System.out.println();
         int finavg=(((avgsun/4)+(avgmon/4)+(tue/4)+(wed/4)+(thu/4)+(fri/4)+(sat/4))/7);
-        System.out.println("The final average temperature for the week was:" +finavg);
+        System.out.println("The final average temperature for the week was:\n" );
+        System.out.println("Overall:"+finavg);
         }
     }
