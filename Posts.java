@@ -1,34 +1,37 @@
-package MicroBlog;
+package MicroBlog2;
 import java.util.ArrayList;
 import java.util.Iterator;
 public class Posts {
     String username;
     int ordernumber;
     String url;
-    String contents;
+    String post;
 
 
-    public Posts(String username, int ordernumber, String contents, String url) {
+    public Posts(String username, String url, String post) {
         this.username = username;
-        this.ordernumber = ordernumber;
         this.url = url;
-        this.contents = contents;
+        this.post = post;
 
-
-    }}
-
-    /*public void add(User username) {
-        users.add(username);
     }
 
-    public ArrayList getUsername() {
-        return users;
-    }
 
     public String getPosts() {
-        return username + " " + ordernumber + " " + contents + " " + url;
+        return post;
 
 
     }
 
-}*/
+
+    public Posts(String username) {
+        this.username=username;
+
+}
+    public String getUsername() {
+        return username;
+    }
+        public int getOrdernumber()
+    {
+        return ordernumber;
+    }}
+
