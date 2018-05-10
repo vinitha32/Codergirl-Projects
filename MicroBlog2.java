@@ -69,8 +69,14 @@ public class MicroBlog2 {
                     for (int j = 0; j < users.size(); j++) {
                         System.out.println((users.get(j).getUsername() + " "));
                     }
-                    in.nextLine();
-                    user = in.next();
+                     if(in.nextLine().equals(user))
+                    {
+                    user = in.next();}
+                    else
+                    {
+                        System.out.println("user not exists");
+                    }
+
 
 
                     break;
