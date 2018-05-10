@@ -16,7 +16,7 @@ public class MicroBlog2 {
         System.out.println("3) Create a post as the current user");
         System.out.println("4) Print all posts");
         System.out.println("5) Print all users");
-
+        System.out.println("6) Exit menu");
     }
 
     public  MicroBlog2() {
@@ -38,50 +38,41 @@ public class MicroBlog2 {
                     System.out.println("#####Create a new user#######");
                     System.out.println("What is your username?");
                     in.nextLine();
-                    String userName = in.next();
+                    String userName = in.nextLine();
                     System.out.println("What is your Firstname?");
-                    in.nextLine();
-                    String firstName = in.next();
-                    System.out.println("What is your Latname?");
-                    in.nextLine();
-                    String lastName = in.next();
+                    String firstName = in.nextLine();
+                    System.out.println("What is your Lastname?");
+                    String lastName = in.nextLine();
                     System.out.println("What is your Webaddress");
-                    in.nextLine();
-                    String webAddress = in.next();
+                    String webAddress = in.nextLine();
                     System.out.println("What is your url");
-                    in.nextLine();
-                    String url = in.next();
+                    String url = in.nextLine();
                     System.out.println("What is your email?");
-                    in.nextLine();
-                    String email = in.next();
+                    String email = in.nextLine();
                     users.add(new User(userName, firstName, lastName, webAddress, email));
                     System.out.println("What you want to post");
-                    in.nextLine();
-                    String post = in.next();
+                    String post = in.nextLine();
                     contents.add(new Posts(userName, url, post));
-
                     break;
-
+                    
                 case 2:
+                    
                     System.out.println("#####Become an existing user######");
                     System.out.println("The existing users are shown below.Which user name you want to pick?");
 
                     for (int j = 0; j < users.size(); j++) {
                         System.out.println((users.get(j).getUsername() + " "));
                     }
-                     if(in.nextLine().equals(user))
-                    {
-                    user = in.next();}
-                    else
-                    {
-                        System.out.println("user not exists");
-                    }
 
-
+                    in.nextLine();
+                    user = in.nextLine();
+             
+                    System.out.println("The user is now " + user);
 
                     break;
 
                 case 3:
+                    
                     System.out.println("#####Creating post as existing user######");
                     System.out.println("Last post by "+user);
                     String userPost = "Post not found";
@@ -93,7 +84,7 @@ public class MicroBlog2 {
 
                     System.out.println("Type the new post "+user);
                     in.nextLine();
-                    String post1 = in.next();
+                    String post1 = in.nextLine();
                     contents.add(new Posts(user,"", post1));
 
                     break;
@@ -112,13 +103,16 @@ public class MicroBlog2 {
                         System.out.println(" " + users.get(i).getUsername());
 
                     }
-
                     System.out.println(" ");
 
                     break;
                 default:
                     System.err.println("Unrecognized option");
                     break;
+                case 6:
+                {
+                    System.exit(0);
+                }
             }
         }
     }
