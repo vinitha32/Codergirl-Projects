@@ -107,7 +107,7 @@ public class MicroBlog2 {
                 case 4:
                   System.out.println("######Print all posts######");
                     for (int j = 0; j < contents.size(); j++) {
-                        System.out.println(" " + contents.get(j).getPosts()+"\n");
+                        System.out.println(" UserName " +contents.get(j).getUsername()+"  Posts  " +contents.get(j).getPosts()+"\n");
                     }
                     break;
 
