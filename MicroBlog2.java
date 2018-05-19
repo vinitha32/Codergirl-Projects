@@ -67,7 +67,22 @@ public class MicroBlog2 {
                     in.nextLine();
                     user = in.nextLine();
              
-                    System.out.println("The user is now " + user);
+                   
+            boolean status = false;
+                    for (int i = 0; i < users.size(); i++) {
+                        if (user.equals(users.get(i).getUsername())) {
+
+                            System.out.println("The user is now " + user);
+                        status = true;
+
+                        }
+                    }
+
+                        if (!status)
+                        {
+                            System.out.println(user + "  is not a valid user");
+                            user = "pug";
+                        }
 
                     break;
 
