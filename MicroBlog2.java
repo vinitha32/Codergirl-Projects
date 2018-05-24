@@ -22,7 +22,7 @@ public class MicroBlog2 {
     public  MicroBlog2() {
         ArrayList<User> users = new ArrayList<User>();
         ArrayList<Posts> contents = new ArrayList<Posts>();
-        ArrayList<Posts> inputs = new ArrayList<Posts>();
+       
         String user = "pug";
 
 
@@ -50,14 +50,19 @@ public class MicroBlog2 {
                     System.out.println("What is your email?");
                     String email = in.nextLine();
                     users.add(new User(userName, firstName, lastName, webAddress, email));
-                    System.out.println("What you want to post");
-                    String post = in.nextLine();
-                    contents.add(new Posts(userName, url, post));
+                
                     break;
                     
                 case 2:
                     
                     System.out.println("#####Become an existing user######");
+                     if(users.size() == 0)
+                        {
+                            System.out.println("No existing users currently");
+                            display_menu();
+                        }
+
+                    
                     System.out.println("The existing users are shown below.Which user name you want to pick?");
 
                     for (int j = 0; j < users.size(); j++) {
