@@ -1,29 +1,33 @@
 package PatternMaker;
 
-public class PatternClass {
+public abstract class PatternClass {
 
-    ShortLineStitch stitch = new ShortLineStitch();
+    ShortLineStitch short1 = new ShortLineStitch();
 
-    SmallCrossStitch stitch1 = new SmallCrossStitch();
-    LargeCrossStitch stitch2 = new LargeCrossStitch();
-    CircleStitch stitch3 = new CircleStitch();
-    FillStitch stitch4 = new FillStitch();
-    BlockStitch stitch6 = new BlockStitch();
-    BlockStitch stitch5=new BlockStitch();
-    ZigZagStitch stitch7 = new ZigZagStitch();
+    Stitch small = new SmallCrossStitch();
+    Stitch large = new LargeCrossStitch();
+    Stitch circle = new CircleStitch();
+    Stitch fill = new FillStitch();
+    Stitch block = new BlockStitch();
+    //Stitch block1=new BlockStitch();
+    Stitch zig = new ZigZagStitch();
+
+
+    abstract String pattern();
+    boolean needleJam = (Math.random() < 0.05d);
+    boolean needleJam1 = (Math.random() < 0.00d);
+    boolean needleJam2 = (Math.random() < 0.00d);
+    boolean needleJam3 = (Math.random() < 0.10d);
+    boolean needleJam4 = (Math.random() < 0.40d);
+    boolean[] s={needleJam,needleJam1,needleJam2,needleJam3,needleJam4};
 
 
 
-    String  pattern1 = String.valueOf(stitch1.stitch1)+String.valueOf(stitch2.stitch2);
-     String   pattern2=String.valueOf(stitch7.stitch7) +String.valueOf(stitch7.stitch7)+String.valueOf(stitch7.stitch7)+String.valueOf(stitch4.stitch4)+String.valueOf(stitch4.stitch4)+String.valueOf(stitch4.stitch4);
-    String  pattern3=String.valueOf(stitch.stitch) +String.valueOf(stitch.stitch) +String.valueOf(stitch.stitch3);
-    String  pattern4=String.valueOf(stitch5.stitch5)+String.valueOf(stitch6.stitch6) +String.valueOf(stitch.stitch)+String.valueOf(stitch.stitch)+String.valueOf(stitch3.stitch3);
-    String  pattern5=String.valueOf(stitch1.stitch1) +String.valueOf(stitch2.stitch2);
+    String  pattern1 = String.valueOf(small.stitch())+String.valueOf(large.stitch());
+     String   pattern2=String.valueOf(zig.stitch()) +String.valueOf(zig.stitch())+String.valueOf(zig.stitch())+String.valueOf(fill.stitch())+String.valueOf(fill.stitch())+String.valueOf(fill.stitch());
+    String  pattern3=String.valueOf(short1.stitch()) +String.valueOf(short1.stitch()) +String.valueOf(circle.stitch());
+    String  pattern4=String.valueOf(block.stitch())+String.valueOf(block.stitch6) +String.valueOf(short1.stitch())+String.valueOf(short1.dStitch)+String.valueOf(fill.stitch3);
+    String  pattern5=String.valueOf(small.stitch()) +String.valueOf(large.stitch());
 
 
     }
-
-
-
-
-
