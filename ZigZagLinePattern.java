@@ -2,12 +2,15 @@ package PatternMaker;
 
 
 public class ZigZagLinePattern extends PatternClass {
-    public void pattern()
+   public String pattern()
+   {
+
+
+        return this.pattern2;
+    }
+    public boolean isJammed()
     {
 
-        System.out.println(pattern2);
-
+        return s[1];
     }
-
-
 }
