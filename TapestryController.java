@@ -13,7 +13,7 @@ public class TapestaryController {
         
 
 
-{
+
         for (int m = 0; m < c.length; m++) {
 
             System.out.println("Printing "+c[m]);
@@ -42,4 +42,4 @@ public class TapestaryController {
             }
         System.out.println();
 
-    }}}}
+    }}}
