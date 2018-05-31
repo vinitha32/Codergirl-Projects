@@ -1,11 +1,11 @@
-package PatternMaker;
+ package PatternMaker;
 
 
-    public class FillStitch extends Stitch{
+   public class FillStitch extends Stitch{
 
-        public char stitch4(char stitch4)
+        public char stitch()
         {
-            this.stitch4=stitch4;
+
             return stitch4;
         }
     }
