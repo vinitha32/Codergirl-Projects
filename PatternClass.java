@@ -9,12 +9,19 @@ public abstract class PatternClass {
     Stitch circle = new CircleStitch();
     Stitch fill = new FillStitch();
     Stitch block = new BlockStitch();
-  
     Stitch zig = new ZigZagStitch();
 
 
     abstract String pattern();
-   
+    abstract boolean isJammed();
+   boolean needleJam = (Math.random() < 0.05d);
+    boolean needleJam1 = true;
+    boolean needleJam2 = true;
+    boolean needleJam3 = (Math.random() < 0.10d);
+    boolean needleJam4 = (Math.random() < 0.40d);
+
+
+    boolean[] s={needleJam,needleJam1,needleJam2,needleJam3,needleJam4};
 
     String  pattern1 = String.valueOf(small.stitch())+String.valueOf(large.stitch());
      String   pattern2=String.valueOf(zig.stitch()) +String.valueOf(zig.stitch())+String.valueOf(zig.stitch())+String.valueOf(fill.stitch())+String.valueOf(fill.stitch())+String.valueOf(fill.stitch());
@@ -23,9 +30,5 @@ public abstract class PatternClass {
     String  pattern5=String.valueOf(small.stitch()) +String.valueOf(large.stitch());
 
 
-    }
 
-
-
-
-
+}
