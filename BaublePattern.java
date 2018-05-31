@@ -2,8 +2,8 @@ package PatternMaker;
 
 public class BaublePattern extends PatternClass {
 
-public void pattern() {
+public String pattern() {
 
-    System.out.println(pattern3);
+   return pattern3;
 
 }}
