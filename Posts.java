@@ -1,16 +1,16 @@
 package MicroBlog2;
-import java.util.ArrayList;
-import java.util.Iterator;
+
 public class Posts {
     String username;
     int ordernumber;
-    String url;
+    String webaddress;
     String post;
 
 
-    public Posts(String username, String url, String post) {
+    public Posts(String username, int ordernumber,String webaddress, String post) {
         this.username = username;
-        this.url = url;
+        this.ordernumber=ordernumber;
+        this.webaddress = webaddress;
         this.post = post;
 
     }
@@ -21,12 +21,12 @@ public class Posts {
 
 
     }
-
-
-    public Posts(String username) {
-        this.username=username;
-
+public String getWebaddress()
+{
+    return webaddress;
 }
+
+
     public String getUsername() {
         return username;
     }
