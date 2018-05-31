@@ -1,10 +1,11 @@
 package PatternMaker;
 
-public class ShortLineStitch  extends Stitch{
-    public char stitch(char stitch)
+public  class ShortLineStitch  extends Stitch{
+
+    public char stitch()
     {
-        //this.stitch=stitch;
-        return stitch;
 
+        return this.dStitch;
+    }
 
-    }}
+    }
