@@ -1,11 +1,10 @@
 package PatternMaker;
 
-public class CircleStitch extends Stitch {
-    public char stitch3(char stitch3)
+public  class CircleStitch extends Stitch {
+
+    public char stitch()
     {
-        this.stitch3=stitch3;
+
         return stitch3;
     }
 }
-
-
