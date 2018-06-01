@@ -16,7 +16,7 @@ public class TapestaryController {
 
         for (int m = 0; m < c.length; m++) {
 
-            System.out.println("Printing "+c[m]);
+            System.out.println("Printing "+c[m].getClass());
             if(c[m].isJammed())
 
             for (int j = 1; j <= 3; j++) {
