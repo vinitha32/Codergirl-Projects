@@ -6,11 +6,13 @@ public class ZigZagLinePattern extends PatternClass {
    {
 
 
-        return this.pattern2;
+       String pattern2=String.valueOf(zig.stitch()) +String.valueOf(zig.stitch())+String.valueOf(zig.stitch())+String.valueOf(fill.stitch())+String.valueOf(fill.stitch())+String.valueOf(fill.stitch());
+       return pattern2;
     }
+    boolean needleJam1 = true;
     public boolean isJammed()
     {
 
-        return s[1];
+     return needleJam1;
     }
 }
